@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>hollo world</h1>
+  <button id="play">play</button>
+  <br/>
+  <br/>
+
+  <div id = "waveformDiv">
+    <label for="waveform">wave</label>
+    <br/>
+    <select id="waveform" value="sine">
+      <option value="sine">sine</option>
+      <option value="square">square</option>
+      <option value="sawtooth">saw</option>
+      <option value="triangle">tri</option>
+    </select>
+  </div>
+
+  <div id = "volumeDiv">
+    <br/>
+    <label for="volume">vol</label>
+    <br/>
+    <input id="volume" type="range" min="0", max="100", step="1", value="10">
+  </div>
+
+  <script src='./dsp.js'></script>
+</body>
+</html>
