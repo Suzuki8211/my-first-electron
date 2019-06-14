@@ -1,6 +1,5 @@
 'use strict'
 const { ipcRenderer }  = require('electron')
-//import ipcRenderer from 'electron';
 
 ipcRenderer.on('dspStart', ()=>{
 
@@ -26,4 +25,5 @@ ipcRenderer.on('dspStart', ()=>{
         depth.gain = document.getElementById("volume").value;
         osc.type = event.target.value;
     }
+    
 });

@@ -1,17 +1,20 @@
 const { app, BrowserWindow } = require('electron');
-const path = require('path');
 
 function main() {
     let mainWindow = new BrowserWindow({
-        width: 250,
+        width: 1000,
         height: 300,
+        webPreferences: {
+            nodeIntegration: true
+        },
+        show: false
     });
-    mainWindow.loadFile('index.html');
 
-    
+    mainWindow.loadFile('index.html');
+    mainWindow.show();
     mainWindow.once('show', ()=> {
+        console.log("execute");
         mainWindow.webContents.send('dspStart');
-        console.log("show");
     });
 }
 
