@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,700|Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
 <body>
-  <h1>hello world</h1>
-  <button id="play">play</button>
+  <button id="on" class="cha">hello world</button>
   <br/>
   <br/>
 
   <div id = "waveformDiv">
-    <label for="waveform">wave</label>
+    <label for="waveform" id="waveName" class="cha"></label>
     <br/>
+    <input id="waveform" type="range" min="250", max="1500", step="1", value="1500">
+    <!--
     <select id="waveform" value="sine">
       <option value="sine">sine</option>
       <option value="square">square</option>
       <option value="sawtooth">saw</option>
       <option value="triangle">tri</option>
     </select>
+    -->
+  </div>
+  
+  <br/>
+
+  <div id="pitchModDiv">
+    <label for="pitchMod" id="freqValue" class="cha"></label>
+    <br/>
+    <input id="pitchBase" type="range" min="250", max="1500", step="1", value="1500">
   </div>
 
+  <br/>
+
   <div id = "volumeDiv">
-    <br/>
-    <label for="volume">vol</label>
-    <br/>
-    <input id="volume" type="range" min="0", max="100", step="1", value="10">
-  </div>
+      <label for="volume" class="cha">vol</label>
+      <br/>
+      <input id="volume" type="range" min="0", max="0.9", step="0.01", value="0.9">
+   </div>
+
+
+   <canvas id="graph" width=150 height=60></canvas>
 
   <script src='./dsp.js'></script>
 </body>
